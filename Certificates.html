@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="mystyle.css">
+
+</head>
+<body>
+
+<ul class="sidenav">
+  
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="Certificates.html">Certificates</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 8</div>
+  <img src="cetefecations/CompTIA%20Security+.jpg" style="width:100%">
+  <div class="text">CompTIA Security+ (SY0-601) Cert Prep:The Basics</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 8</div>
+  <img src="cetefecations/E-markieting%20with%20lowe%20cost.jpg" style="width:100%">
+  <div class="text">E-Marketing with the Lowest Cost</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 8</div>
+  <img src="cetefecations/HTML%20Essenial%20Traning.jpg" style="width:100%">
+  <div class="text">HTML Essential Training</div>
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">4 / 8</div>
+  <img src="cetefecations/internet%20of%20things.jpg" style="width:100%">
+  <div class="text">internet of things</div>
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">5 / 8</div>
+  <img src="cetefecations/intoduction%20to%20css.jpg" style="width:100%">
+  <div class="text">Introduction to CSS</div>
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">6 / 8</div>
+  <img src="cetefecations/marketing%20foundations.jpg" style="width:100%">
+  <div class="text">Marketing Foundations</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">7 / 8</div>
+  <img src="cetefecations/DevOps.png" style="width:100%">
+  <div class="text">DevOps Foundations</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">8 / 8</div>
+  <img src="cetefecations/ThinkingCreatvly.png" style="width:100%">
+  <div class="text">Thinking Creatively</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
+
+
